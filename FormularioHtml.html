@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Workshop Registration</title>
+
+<style type="text/css">
+.form-style{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 900px;
+	margin: 10px auto;
+	padding: 16px;
+}
+
+.form-style h1{
+	background: #29b795;
+	padding: 20px 0;
+	font-size: 120%;
+	font-weight: 300;
+	text-align: left;
+	color: #000000;
+	margin: -16px -16px 16px -16px;
+}
+
+input, textarea, select {
+     display: block;
+     width: 170px;
+     float: right;
+     margin-bottom: 20px;
+}
+
+input[type="checkbox"] + label {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    vertical-align:middle;
+    cursor:pointer;
+    float: left;
+}
+
+input[type="checkbox"]{
+    float: left;
+}
+
+button {
+     background: #29b795;
+     color: #FFFFFF;
+     font-weight: bold;
+}
+
+.label {
+    width: 180px;
+    display: inline-flex;
+    font-weight: bold;
+}
+
+span.validate {
+     display: block;
+     float: left;
+     width: 10px;
+     margin-bottom: 10px;
+     color: #FF0000;
+}
+
+.left {
+    float:left;
+    width:48%;
+}
+
+.right {
+    float:right;
+    width:48%;
+}
+
+.parent {
+    display: table
+}
+
+.child {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+IE Fix:
+child {
+    display: inline-block
+}
+
+</style>
+</head>
+<body>
+<div class="form-style">
+    <h1>Workshop Registration</h1>
+    <div>
+        <p style="text-decoration: underline">Register now while seats are available!</p>
+    </div>
+    <br>
+    <form>
+        <div>
+            <div class="left">
+                <span class="label">First Name<span class="validate">*</span></span>
+                <input type="text" id="fname" name="fname" />
+            </div>
+            <div class="right">
+                <p style="text-decoration: underline">Lunch</p>
+            </div>
+        </div>
+        <div>
+            <div class="left">
+                <span class="label">Last Name<span class="validate">*</span></span>
+                <input type="text" id="lname" name="lname" />
+            </div>
+            <div class="right">
+                <span class="label">Meal Preference</span>
+                <select id="meal" name="meal">
+                    <option value="1">Vegetarian</option>
+                    <option value="2">carnivorous</option>
+                    <option value="3">Other</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="left">
+                <span class="label">Company/Institution<span class="validate">*</span></span>
+                <input type="text" id="company" name="company" />
+            </div>
+            <div class="right">
+                <p style="text-decoration: underline">Paiment Detail</p>
+            </div>
+        </div>
+        <div>
+            <div class="left block parent">
+                    <span class="label child">Address<span class="validate">*</span></span>
+                    <textarea id="address" name="address" rows="3"></textarea>
+
+            </div>
+            <div class="right parent">
+                <span class="label child">Payment Mode</span>
+                <input type="checkbox" id="cash" name="cash"/><label>Cash</label></br>
+                <input type="checkbox" id="cheque" name="cheque"/><label>Cheque</label></br>
+                <input type="checkbox" id="demand" name="demand"/><label>Demand Draft</label></br>
+            </div>
+        </div>
+        <div>
+            <div class="left">
+                <span class="label">City</span>
+                <input type="text" id="city" name="city" />
+            </div>
+            <div class="right">
+                <span class="label">DD Cheque No.</span>
+                <input id="cheque_no" type="text" name="cheque_no"/>
+            </div>
+        </div>
+        <div>
+            <div class="left">
+                <span class="label">State/Province/Region</span>
+                <select id="state" name="state">
+            	   <option value="">-Select-</option>
+            	   <option value="1">State 1</option>
+            	   <option value="2">State 2</option>
+            	   <option value="3">Region 1</option>
+            	   <option value="4">Province 1</option>
+                </select>
+            </div>
+            <div class="right">
+                <span class="label">Drawn On (Bank Name)</span>
+                <input id="bank" type="text" name="bank"/>
+            </div>
+        </div>
+        <div>
+            <div class="left">
+                <span class="label">Country</span>
+                <select id="country" name="state">
+            	   <option value="">-Select-</option>
+            	   <option value="1">USA</option>
+            	   <option value="2">Canada</option>
+            	   <option value="3">Russia</option>
+                </select>
+            </div>
+            <div class="right">
+                <span class="label">Payable At</span>
+                <input id="payable" type="text" name="payable"/>
+            </div>
+        </div>
+        <div style="width: 100%">
+            <div class="left">
+                <span class="label">Email<span class="validate">*</span></span>
+                <input type="text" id="email" name="email" />
+            </div>
+        </div>
+        <div style="width: 100%">
+            <div class="left" style="float: inherit;">
+                <span class="label">Phone Number<span class="validate">*</span></span>
+                <input type="text" id="phone" name="phone" />
+            </div>
+        </div>
+        <div>
+            <div class="left">
+                <button type="submit" style="float: right;">Submit</button>
+            </div>
+            <div class="right">
+                <button type="button" style="float: left;">Reset</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
