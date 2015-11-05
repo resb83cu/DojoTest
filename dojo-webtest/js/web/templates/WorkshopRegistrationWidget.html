@@ -1,0 +1,186 @@
+<div class="form-style">
+    <h1>${i18n.formTitle}</h1>
+
+    <div data-dojo-type="dijit/form/DropDownButton">
+        <span>${i18n.moreActions}</span>
+
+        <div data-dojo-type="dijit/Menu" id="editMenu1" style="display: none;">
+            <div data-dojo-type="dijit/MenuItem">
+                <a class="change-language" href="?lang=es">${i18n.langEs}</a>
+            </div>
+
+            <div data-dojo-type="dijit/MenuItem">
+                <a class="change-language" href="?lang=en">${i18n.langEn}</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p class="subtitle">${i18n.formSubTitle1}</p>
+    </div>
+    <br>
+
+    <form id="workshopRegistrationForm" data-dojo-type="dijit/form/Form" method="post" action="">
+        <div class="row">
+            <div class="left">
+                <span class="label">${i18n.firstName}<span class="validate">*</span></span>
+                <input type="text" id="fname" class="insertView" name="fname"
+                       data-dojo-type="dijit/form/ValidationTextBox"
+                       data-dojo-props="required:true"/>
+
+                <div id="fnamePreview" class="preview"></div>
+            </div>
+            <div class="right">
+                <p class="subtitle">${i18n.lunch}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left">
+                <span class="label">${i18n.lastName}<span class="validate">*</span></span>
+                <input type="text" id="lname" name="lname" class="insertView"
+                       data-dojo-type="dijit/form/ValidationTextBox"
+                       data-dojo-props="required:true"/>
+
+                <div id="lnamePreview" class="preview"></div>
+            </div>
+            <div class="right">
+                <span class="label">${i18n.mealPreference}</span>
+                <select id="meal" name="meal" class="insertView" data-dojo-type="dijit/form/Select">
+                    <option value="1">Vegetarian</option>
+                    <option value="2">Carnivorous</option>
+                    <option value="3">Other</option>
+                </select>
+
+                <div id="mealPreview" class="preview"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left">
+                <span class="label">${i18n.companyInstitution}<span class="validate">*</span></span>
+                <input type="text" id="company" name="company" class="insertView"
+                       data-dojo-type="dijit/form/ValidationTextBox"
+                       data-dojo-props="required:true"/>
+
+                <div id="companyPreview" class="preview"></div>
+            </div>
+            <div class="right">
+                <p class="subtitle">${i18n.paymentDetail}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left block parent">
+                <span class="label child">${i18n.address}<span class="validate">*</span></span>
+                <textarea class="insertView" name="address" rows="3" data-dojo-type="web/form/ValidationTextArea"
+                          data-dojo-props="required:true"></textarea>
+
+                <div id="addressPreview" class="preview"></div>
+            </div>
+            <div class="right parent">
+                <span class="label child">${i18n.paymentMode}</span>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="cash" name="cash"
+                               data-dojo-type="dijit/form/CheckBox">
+                        <label>${i18n.cash}</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="cheque" name="cheque"
+                               data-dojo-type="dijit/form/CheckBox">
+                        <label>${i18n.cheque}</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="demand" name="demand"
+                               data-dojo-type="dijit/form/CheckBox">
+                        <label>${i18n.demandDraft}</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left">
+                <span class="label">${i18n.city}</span>
+                <input name="city" id="city" type="text" class="insertView"
+                       data-dojo-type="dijit/form/ValidationTextBox"/>
+
+                <div id="cityPreview" class="preview"></div>
+            </div>
+            <div class="right">
+                <span class="label">${i18n.dDCheque}</span>
+                <input name="cheque_no" id="cheque_no" class="insertView" type="text"
+                       data-dojo-type="dijit/form/ValidationTextBox"/>
+
+                <div id="cheque_noPreview" class="preview"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left">
+                <span class="label">${i18n.stateProvinceRegion}</span>
+                <select id="state" name="state" class="insertView"
+                        data-dojo-type="dijit/form/Select"
+                        data-dojo-props='optionsTitle:"Seleccione"'>
+                    <option value="">-Select-</option>
+                    <option value="1">Province 1</option>
+                    <option value="2">Region 1</option>
+                    <option value="3">State 1</option>
+                    <option value="4">State 2</option>
+                </select>
+
+                <div id="statePreview" class="preview"></div>
+            </div>
+            <div class="right">
+                <span class="label">${i18n.drawnOn}</span>
+                <input name="bank" id="bank" type="text" class="insertView"
+                       data-dojo-type="dijit/form/ValidationTextBox"/>
+
+                <div id="bankPreview" class="preview"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left">
+                <span class="label">${i18n.country}</span>
+                <select id="country" name="country" class="insertView"
+                        data-dojo-type="dijit/form/Select"
+                        data-dojo-props='optionsTitle:"Seleccione"'>
+                    <option value="">-Select-</option>
+                    <option value="1">USA</option>
+                    <option value="2">CUBA</option>
+                    <option value="3">CANADA</option>
+                </select>
+
+                <div id="countryPreview" class="preview"></div>
+            </div>
+            <div class="right">
+                <span class="label">${i18n.payableAt}</span>
+                <input id="payable" type="text" name="payable" type="text" class="insertView"
+                       data-dojo-type="dijit/form/ValidationTextBox"/>
+
+                <div id="payablePreview" class="preview"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left">
+                <span class="label">${i18n.email}<span class="validate">*</span></span>
+                <input type="text" id="email" name="email" class="insertView"
+                       data-dojo-type="dijit/form/ValidationTextBox"
+                       data-dojo-props="validator:dojox.validate.isEmailAddress"/>
+
+                <div id="emailPreview" class="preview"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left">
+                <span class="label">${i18n.phoneNumber}<span class="validate">*</span></span>
+                <input type="text" id="phone" name="phone" class="insertView"
+                       data-dojo-type="dijit/form/ValidationTextBox"
+                       data-dojo-props="required:true"/>
+
+                <div id="phonePreview" class="preview"></div>
+            </div>
+        </div>
+        <div class="row-buttom">
+            <button type="submit" class="insertView">${i18n.submit}</button>
+            <button type="button" id="returnButton" class="preview dijitHidden"
+                    data-dojo-type="dijit/form/Button">${i18n.return}</button>
+            <button type="reset">${i18n.reset}</button>
+        </div>
+    </form>
+</div>
