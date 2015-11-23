@@ -6,6 +6,7 @@ define(["dojo/_base/declare", "dojo/_base/lang", "dijit/form/SimpleTextarea", "d
                 this.constraints = {};
                 this.baseClass += ' dijitValidationTextArea';
             },
-            templateString: "<textarea ${!nameAttrSetting} data-dojo-attach-point='focusNode,containerNode,textbox' autocomplete='off'></textarea>"
+            templateString: "<textarea ${!nameAttrSetting} data-dojo-attach-point='focusNode,containerNode,textbox' autocomplete='off'>" +
+            "</textarea>"
         })
     })

@@ -1,12 +1,14 @@
 require([
+    "dojo/dom",
     "dojo/query",
     "dojo/parser",
     "dojo/ready",
+    "dojo/domReady!",
     "dijit/Menu",
     "dijit/form/ComboButton",
     "dijit/Dialog",
     "web/WorkshopRegistrationWidget"
-], function (query, parser, ready, Dialog) {
+], function (dom, query, parser, ready, Dialog) {
     function changeLanguage(e) {
         var params = window.location.search;
         if (params) {

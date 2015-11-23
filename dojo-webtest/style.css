@@ -5,15 +5,29 @@
     padding: 16px;
 }
 
-.form-style h1{
+.header-style{
     background: #29b795;
-    padding: 20px 10px;
-    font-size: 120%;
+    width: 100%;
+    padding: 1px 10px;
+    display: inline-flex;
+    font-size: 70%;
     font-weight: 300;
     text-align: left;
     color: #000000;
     margin: -16px -16px 16px -16px;
-    font-weight: bold;
+}
+
+.header-left {
+    width:30%;
+}
+
+.header-right {
+    width:70%;
+    padding-top: 14px;
+}
+
+input, textarea, select{
+    width: 200px;
 }
 
 button {
@@ -22,19 +36,22 @@ button {
     font-weight: bold;
 }
 
-textarea{
-    width: 75%;
-}
-
 .label {
-    width: 180px;
+    width: 50%;
     display: inline-flex;
     font-weight: bold;
+    /*float:left;*/
+}
+
+.field {
+    /*width: 48%;*/
+    display: inline-flex;
+    float:left;
 }
 
 span.validate {
-    display: block;
-    float: left;
+    /*display: block;*/
+    /*float: left;*/
     width: 10px;
     margin-bottom: 10px;
     color: #FF0000;
@@ -43,32 +60,49 @@ span.validate {
 .row {
     /*display: flex;*/
     overflow: hidden;
+    /*height: 50px;*/
+    /*margin-bottom: 7px;*/
+    margin-bottom: 20px;
 }
+
+.row-big {
+    /*display: flex;*/
+    overflow: hidden;
+    height: 100px;
+}
+
 .row-buttom {
     /*display: flex;*/
     overflow: hidden;
     text-align: center;
     background-color: #cccccc;
+    height: 50px;
+    width: 100%;
+}
+
+.language-selector{
+    background: transparent;
 }
 
 .subtitle{
     text-decoration: underline;
+    margin-top: 0;
 }
 
 .left {
     float:left;
     width:48%;
-    display: inline-block;
+    display: inline-flex;
 }
 
 .preview{
-    display: inline-block;
+    display: inline-flex;
 }
 
 .right {
     float:right;
     width:48%;
-    display: inline-block;
+    display: inline-flex;
 }
 
 .parent {
@@ -82,4 +116,5 @@ span.validate {
 
 ul{
     list-style:none;
+    padding-left: 0;
 }
